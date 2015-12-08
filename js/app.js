@@ -3,25 +3,25 @@ var myApp = angular.module('myApp', ['ui.router'])
 myApp.config(function($stateProvider) {
     $stateProvider.state('home', {
         url:'',
-        templateUrl:'../templates/home.html',
+        templateUrl:'./templates/home.html',
         controller:'homeCtrl'
     })
     
     $stateProvider.state('heatmap', {
         url:'/heatmap',
-        templateUrl:'../templates/heatmap.html',
+        templateUrl:'./templates/heatmap.html',
         controller:'heatmapCtrl'
     })
     
     $stateProvider.state('piechart', {
         url:'/piechart',
-        templateUrl:'../templates/piechart.html',
+        templateUrl:'./templates/piechart.html',
         controller:'piechartCtrl'
     })
     
     $stateProvider.state('timemap', {
         url:'/timemap',
-        templateUrl:'../templates/timemap.html',
+        templateUrl:'./templates/timemap.html',
         controller:'timemapCtrl'
     })
 })
