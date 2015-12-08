@@ -64,3 +64,12 @@ header {
     border-radius: 10px;
     font-family: Helvetica-Neue;
 }
+
+#chart-container{
+	text-align: center;
+
+}
+
+.btn{
+	margin: 2px;
+}	
