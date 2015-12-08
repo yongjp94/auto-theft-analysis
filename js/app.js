@@ -187,7 +187,7 @@ myApp.config(function($stateProvider) {
 	  colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"], // alternatively colorbrewer.YlGnBu[9]
 	  days = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
 	  times = ["1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a", "9a", "10a", "11a", "12a", "1p", "2p", "3p", "4p", "5p", "6p", "7p", "8p", "9p", "10p", "11p", "12p"];
-	  datasets = ["january.tsv", "february.tsv", "march.tsv", "april.tsv", "may.tsv", "june.tsv", "july.tsv", "august.tsv", "september.tsv", "october.tsv", "november.tsv", "december.tsv"];
+	  datasets = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
 
   var svg = d3.select("#chart").append("svg")
 	  .attr("width", width + margin.left + margin.right)
@@ -277,16 +277,16 @@ myApp.config(function($stateProvider) {
 	$scope.current = "january.tsv"
   heatmapChart("./data/january.tsv");
   
-  var datasetpicker = d3.select("#dataset-picker").selectAll(".dataset-button")
+  var datasetpicker = d3.select("#dataset-picker").selectAll(".btn-primary")
 	.data(datasets);
 
   datasetpicker.enter()
 	.append("input")
 	.attr("value", function(d){ return d })
 	.attr("type", "button")
-	.attr("class", "dataset-button")
+	.attr("class", "btn-primary")
 	.on("click", function(d) {
-		current = "./data/" + d;
+		current = "./data/" + d + ".tsv";
 		console.log(current);
 	  heatmapChart(current);
 	});
