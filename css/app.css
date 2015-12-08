@@ -1,1 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=VT323);
+
+
 #map { height: 700px; }
+
+.jumbotron {
+    color: black;
+}
+
+body {
+    background-color: black;
+    color: white;
+    margin-bottom: 3em;
+}
+
+.container {
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+#prev {
+    margin-left: 46%;
+    margin-bottom: 0.5em;
+}
+
+#next {
+    margin-bottom: 0.5em;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-bottom: 4em;
+    
+}
+
+.banner {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+}
+
+.introduction {
+    float: top;
+    position: relative;
+    text-align: center;
+    font-family: 'VT323';
+    background: black;
+    font-size: 3.5em;
+    top: 14em;
+    width: 16em;
+    left: 10%;
+}
+
+header {
+    margin-top: 65em;
+}
+
+.piechart {
+    background-color: white;
+    border-radius: 10px;
+    font-family: Helvetica-Neue;
+}

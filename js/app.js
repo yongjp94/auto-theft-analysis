@@ -49,7 +49,9 @@ myApp.config(function($stateProvider) {
 .controller('piechartCtrl', function($scope) {
     var items = [];
     var data = [];
+    var labels = [];
     var pie;
+    var index = 0;
     
     $scope.censusNum = 0;
     $scope.colorPalette = ['#2383c1','#0c6197','#4daa4b','#90c469','#daca61','#e4a14b','#e98125','#cb2121'];
@@ -61,11 +63,12 @@ myApp.config(function($stateProvider) {
         }
         return temp;
     }
+    
 
 
-    $scope.loadData = function(index) {
-        var labels = [];
-        var index = 0;
+
+    $scope.loadData = function(i) {
+        var index = i;
         
         $.getJSON( "../data/census_crime_data.json", function(dat) {
             items = [];
@@ -82,22 +85,18 @@ myApp.config(function($stateProvider) {
 
 
             labels = createLabels();
-            
-            for (var i = 0; i < labels.length; i++) {
-                $("#menu").append('<li><a>' + labels[i] +'</a></li>');
-            }
 
             pie = new d3pie("pieChart", {
                 "header": {
                     "title": {
                         "text": "Distribution of Various Crimes for Different Census Tracts",
-                        "fontSize": 24,
+                        "fontSize": 30,
                         "font": "open sans"
                     },
                     "subtitle": {
-                        "text": 'Census Tract #' + items[index]['value'],
+                        "text": 'Census Tract #' + items[0]['value'],
                         "color": "#999999",
-                        "fontSize": 18,
+                        "fontSize": 20,
                         "font": "open sans"
                     },
                     "titleSubtitlePadding": 9
@@ -174,7 +173,22 @@ myApp.config(function($stateProvider) {
             
         }); // end of using data
     };
-    $scope.loadData($scope.censusNum);
+    $scope.loadData(index);
+    $('#next').click(function() {
+        if (index < 22) {
+            index++;
+            pie.destroy();
+            $scope.loadData(index);
+        }
+    });
+    
+    $('#prev').click(function() {
+        if (index > 0) {
+            index--;
+            pie.destroy();
+            $scope.loadData(index);
+        }
+    });
 })
 
 .controller('timemapCtrl', function($scope) {
