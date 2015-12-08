@@ -277,14 +277,13 @@ myApp.config(function($stateProvider) {
 	$scope.current = "january.tsv"
   heatmapChart("./data/january.tsv");
   
-  var datasetpicker = d3.select("#dataset-picker").selectAll(".btn-primary")
+  var datasetpicker = d3.select("#dataset-picker").selectAll(".btn btn-primary")
 	.data(datasets);
-
   datasetpicker.enter()
 	.append("input")
 	.attr("value", function(d){ return d })
 	.attr("type", "button")
-	.attr("class", "btn-primary")
+	.attr("class", "btn btn-primary")
 	.on("click", function(d) {
 		current = "./data/" + d + ".tsv";
 		console.log(current);
