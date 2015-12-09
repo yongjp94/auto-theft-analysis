@@ -70,7 +70,7 @@ myApp.config(function($stateProvider) {
     $scope.loadData = function(i) {
         var index = i;
         
-        $.getJSON( "~/../../var/www/html/auto-theft-analaysis/data/census_crime_data.json", function(dat) {
+        $.getJSON( "~/auto-theft-analaysis/data/census_crime_data.json", function(dat) {
             items = [];
             data = dat;
             var i = -1;
