@@ -2,7 +2,10 @@
 @import url(https://fonts.googleapis.com/css?family=Special+Elite|Merriweather:300);
 
 
-#map { height: 700px; }
+#map { 
+    height: 700px; 
+    border: 3px solid black;
+}
 
 .jumbotron {
     color: black;
@@ -27,6 +30,7 @@ body {
     background-color: white;
     border-radius: 15px;
     color: black;
+    padding: 2em;
 }
 
 ul {
@@ -66,7 +70,7 @@ img {
     font-size: 3.5em;
     top: 14em;
     width: 16em;
-    left: 10%;
+    left: 25%;
 }
 
 header {
@@ -76,7 +80,6 @@ header {
 .piechart {
     background-color: white;
     border-radius: 10px;
-    font-family: Helvetica-Neue;
 }
 
 #chart-container{

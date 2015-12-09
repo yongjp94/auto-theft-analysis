@@ -49,7 +49,7 @@ myApp.config(function($stateProvider) {
 .controller('piechartCtrl', function($scope) {
     var items = [];
     var data = [];
-    var labels = [];
+    $scope.labels = [];
     var pie;
     var index = 0;
     
@@ -64,10 +64,9 @@ myApp.config(function($stateProvider) {
         return temp;
     }
     
+    
 
-
-
-    $scope.loadData = function(i) {
+    var loadData = $scope.loadData = function(i) {
         var index = i;
         
         $.getJSON( "data/census_crime_data.json", function(dat) {
@@ -83,8 +82,7 @@ myApp.config(function($stateProvider) {
                 items.push(item);
             });
 
-
-            labels = createLabels();
+            
 
             pie = new d3pie("pieChart", {
                 "header": {
@@ -173,7 +171,10 @@ myApp.config(function($stateProvider) {
             
         }); // end of using data
     };
+    
+    //load initial data
     $scope.loadData(index);
+    
     $('#next').click(function() {
         if (index < 22) {
             index++;
