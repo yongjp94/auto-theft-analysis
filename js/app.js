@@ -24,6 +24,12 @@ myApp.config(function($stateProvider) {
         templateUrl:'./templates/timemap.html',
         controller:'timemapCtrl'
     })
+    
+    $stateProvider.state('analysis', {
+        url:'/analysis',
+        templateUrl:'./templates/analysis.html',
+        controller:'analysisCtrl'
+    })
 })
 
 .controller('homeCtrl', function($scope) {
@@ -304,5 +310,9 @@ myApp.config(function($stateProvider) {
 		console.log(current);
 	  heatmapChart(current);
 	});
+})
+
+.controller('analysisCtrl', function($scope) {
+    $scope.name = 'analysis'
 })
 

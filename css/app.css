@@ -68,13 +68,13 @@ img {
     font-family: 'VT323';
     background: black;
     font-size: 3.5em;
-    top: 14em;
+    top: 0;
     width: 16em;
     left: 25%;
 }
 
 header {
-    margin-top: 65em;
+    margin-top: 65%;
 }
 
 .piechart {
