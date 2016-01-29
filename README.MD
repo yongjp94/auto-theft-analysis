@@ -1,2 +1,5 @@
-This is a INFO 370 - Intro to Data Science project.
-Our group name is "Cruel Cookies," and our team members are: James, Omar, John, and Bryant.
+This project was created as an assignment for "INFO 370 - Intro to Data Science project" at The University of Washington
+
+Our group name is "Cruel Cookies," and our team members are: James Lee, Omar Rojas, John Yongjun Park, and Bryant Zhu.
+
+This is a git for the website that overviews our analysis of the auto theft incidents within the Seattle area.
